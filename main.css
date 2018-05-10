@@ -1,49 +1,50 @@
 html {
-    position: relative;
-    min-height: 100%;
-    font-family: inherit;
+  position: relative;
+  min-height: 100%;
+  font-family: inherit;
 }
 
 body {
-    
-    margin-top: 50px!important;
-    background-color: black!important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 0px;
+
+  margin-top: 50px!important;
+  background-color: black!important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0px;
 }
 
-h1{
-font-size: 60px;
-font-family: 'Futura';
-color: #fff;
-text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
-text-align: center;
+h1 {
+  font-size: 60px;
+  font-family: 'Futura';
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-align: center;
 }
 
 
 .btn-circle.btn-xl {
-    width: 140px;
-    height: 140px;
-    padding: 10px 16px;
-    border-radius: 70px;
-    font-size: 24px;
-    line-height: 1.33;
+  width: 140px;
+  height: 140px;
+  padding: 10px 16px;
+  border-radius: 70px;
+  font-size: 24px;
+  line-height: 1.33;
 }
 
 .btn-circle {
-    width: 60px;
-    height: 60px;
-    padding: 6px 0px;
-    border-radius: 30px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
+  width: 60px;
+  height: 60px;
+  padding: 6px 0px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
 }
 
 /*********** Buttons ******/
+
 
 #btn1 {
   background-color: blue;
@@ -53,12 +54,6 @@ text-align: center;
 #btn2 {
   background-color: Red;
   box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
-}
-
-#circle {
-  background-color: white;
-  z-index: 10;
-  position: relative;
 }
 
 #btn3 {
@@ -75,6 +70,12 @@ text-align: center;
   background-color: cyan;
   box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan, 0 0 55px cyan, 0 0 75px cyan;
 }
+
+#btn6 {
+  background-color: purple;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple, 0 0 55px purple, 0 0 75px purple;
+}
+
 
 /****** Scoreboard *****/
 
