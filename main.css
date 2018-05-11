@@ -43,37 +43,47 @@ h1 {
   line-height: 1.42857;
 }
 
+.btn-circle:focus {
+  outline: none;
+}
+
+.inner-glow {
+  background: transparent;
+  border: 8px solid #00ff14;
+  box-shadow: 0 0 20px 5px, inset 0 0 20px 7px;
+}
+
 /*********** Buttons ******/
 
 
 #btn1 {
-  background-color: blue;
-  box-shadow: 0 0 5px blue, 0 0 10px #fff, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 55px blue, 0 0 75px blue;
+  border: 5px solid blue;
+  box-shadow: 0 0 5px blue, /*0 0 10px #fff,*/ 0 0 20px blue inset, 0 0 30px blue inset, 0 0 40px blue, 0 0 55px blue, 0 0 75px blue;
 }
 
 #btn2 {
-  background-color: Red;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+  border: 5px solid red;
+  box-shadow: 0 0 5px red, /*0 0 10px #fff,*/ 0 0 20px red inset, 0 0 30px red inset, 0 0 40px red, 0 0 55px red, 0 0 75px red;
 }
 
 #btn3 {
-  background-color: yellow;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow, 0 0 55px yellow, 0 0 75px yellow;
+  border: 5px solid yellow;
+  box-shadow: 0 0 5px yellow, /*0 0 10px #fff,*/ 0 0 20px yellow inset, 0 0 30px yellow inset, 0 0 40px yellow, 0 0 55px yellow, 0 0 75px yellow;
 }
 
 #btn4 {
-  background-color: green;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 55px green, 0 0 75px green;
+  border: 5px solid green;
+  box-shadow: 0 0 5px green, /*0 0 10px #fff,*/ 0 0 20px green inset, 0 0 30px green inset, 0 0 40px green, 0 0 55px green, 0 0 75px green;
 }
 
 #btn5 {
-  background-color: cyan;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan, 0 0 55px cyan, 0 0 75px cyan;
+  border: 5px solid cyan;
+  box-shadow: 0 0 5px cyan, /*0 0 10px #fff,*/ 0 0 20px cyan inset, 0 0 30px cyan inset, 0 0 40px cyan, 0 0 55px cyan, 0 0 75px cyan;
 }
 
 #btn6 {
-  background-color: purple;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple, 0 0 55px purple, 0 0 75px purple;
+  border: 5px solid purple;
+  box-shadow: 0 0 5px purple, /*0 0 10px #fff,*/ 0 0 20px purple inset, 0 0 30px purple inset, 0 0 40px purple, 0 0 55px purple, 0 0 75px purple;
 }
 
 
