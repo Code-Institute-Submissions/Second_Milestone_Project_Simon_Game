@@ -68,14 +68,19 @@ h2 {
   box-shadow: 0 0 5px blue, /*0 0 10px #fff,*/ 0 0 20px blue inset, 0 0 30px blue inset, 0 0 40px blue, 0 0 55px blue, 0 0 75px blue;
 }
 
-#blue {
-  border: 5px solid blue;
-  box-shadow: 0 0 5px blue, /*0 0 10px #fff,*/ 0 0 20px blue inset, 0 0 30px blue inset, 0 0 40px blue, 0 0 55px blue, 0 0 75px blue;
+#blue.shine {
+  border: 5px solid #5DADEC;
+  box-shadow: 0 0 5px #5DADEC, /*0 0 10px #fff,*/ 0 0 20px #5DADEC inset, 0 0 30px #5DADEC inset, 0 0 40px #5DADEC, 0 0 55px #5DADEC, 0 0 75px #5DADEC;
 }
 
 #red {
-  border: 5px solid red;
-  box-shadow: 0 0 5px red, /*0 0 10px #fff,*/ 0 0 20px red inset, 0 0 30px red inset, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+  border: 5px solid #ED0A3F;
+  box-shadow: 0 0 5px #ED0A3F, /*0 0 10px #fff,*/ 0 0 20px #ED0A3F inset, 0 0 30px #ED0A3F inset, 0 0 40px #ED0A3F, 0 0 55px #ED0A3F, 0 0 75px #ED0A3F;
+}
+
+#red.shine {
+  border: 5px solid #FF355E;
+  box-shadow: 0 0 5px #FF355E, /*0 0 10px #fff,*/ 0 0 20px #FF355E inset, 0 0 30px #FF355E inset, 0 0 40px #FF355E, 0 0 55px #FF355E, 0 0 75px #FF355E;
 }
 
 #yellow {
@@ -83,14 +88,29 @@ h2 {
   box-shadow: 0 0 5px yellow, /*0 0 10px #fff,*/ 0 0 20px yellow inset, 0 0 30px yellow inset, 0 0 40px yellow, 0 0 55px yellow, 0 0 75px yellow;
 }
 
+#yellow.shine {
+  border: 5px solid #FFFF99;
+  box-shadow: 0 0 5px #FFFF99, /*0 0 10px #fff,*/ 0 0 20px #FFFF99 inset, 0 0 30px #FFFF99 inset, 0 0 40px #FFFF99, 0 0 55px #FFFF99, 0 0 75px #FFFF99;
+}
+
 #green {
   border: 5px solid green;
   box-shadow: 0 0 5px green, /*0 0 10px #fff,*/ 0 0 20px green inset, 0 0 30px green inset, 0 0 40px green, 0 0 55px green, 0 0 75px green;
 }
 
+#green.shine {
+  border: 5px solid #66FF66;
+  box-shadow: 0 0 5px #66FF66, /*0 0 10px #fff,*/ 0 0 20px #66FF66 inset, 0 0 30px #66FF66 inset, 0 0 40px #66FF66, 0 0 55px #66FF66, 0 0 75px #66FF66;
+}
+
 #cyan {
   border: 5px solid cyan;
   box-shadow: 0 0 5px cyan, /*0 0 10px #fff,*/ 0 0 20px cyan inset, 0 0 30px cyan inset, 0 0 40px cyan, 0 0 55px cyan, 0 0 75px cyan;
+}
+
+#cyan.shine {
+  border: 5px solid #C8C8CD;
+  box-shadow: 0 0 5px #C8C8CD, /*0 0 10px #fff,*/ 0 0 20px #C8C8CD inset, 0 0 30px #C8C8CD inset, 0 0 40px #C8C8CD, 0 0 55px #C8C8CD, 0 0 75px #C8C8CD;
 }
 
 #purple {
