@@ -1,196 +1,171 @@
-var colors = ['blue', 'red', 'yellow', 'green', 'cyan', 'purple'],
-    sounds = {
-    	'blue': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'),
-        'red': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
-        'yellow': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'),
-        'green': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3'),
-        'cyan': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound5.mp3'),
-        'purple': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound6.mp3'),
-        'wrong': new Audio('http://freesound.org/data/previews/216/216090_3450800-lq.mp3')
-    },
-    aiSequence = [],
-    len = 0,
-    playerSequence = [],
-    shineLen = 300,
-    intervalLen = 1200,
-    count = 0,
-    onFlag = false,
-    playerFlag = false,
-    strictFlag = false;
-
-function playerTrue() { //player's turn;
-    playerFlag = true;
-    $('.box').addClass('true');
-}
-
-function playerFalse() { //AI's turn;
-    playerFlag = false;
-    $('.box').removeClass('true');
-}
-
-function win() { //player won;
-    var winSound = new Audio('http://freesound.org/data/previews/109/109662_945474-lq.mp3');
-    setTimeout(function() {
-        winSound.play();
-        count = 0;
-        $('.dash').text('V');
-        $('.dash').fadeTo('fast', 0).fadeTo('fast', 1).fadeTo('fast', 0).fadeTo('fast', 1).fadeTo('fast', 0).fadeTo('fast', 1);
-        $('.box').fadeTo('fast', 0).fadeTo('fast', 1).fadeTo('fast', 0).fadeTo('fast', 1).fadeTo('fast', 0).fadeTo('fast', 1);
-    }, 1000);
-
-    return setTimeout(function() {
-        playerSequence = [];
-        aiSequence = [];
-        aiPush();
-        aiPlay();
-    }, 2000);
+var settings = {
+    sequence: [],
+    round: 0,
+    playNumber: 0,
+    speed: 1000,
+    clicked: 0
 
 }
 
-function aiPush() { //make aiSequence;
-    aiSequence.push(colors[Math.floor(Math.random() * colors.length)]);
-    return setTimeout(counting, 300);
 
-}
+$(document).ready(function() {
+    var audio = $("#sound");
 
-function aiSteps(i) { // AI play sounds and show colors;
+    function animate(divid) {
 
-    $('.' + aiSequence[i]).addClass('shine');
-    sounds[aiSequence[i]].play();
 
-    setTimeout(function() {
-        $('.' + aiSequence[i]).removeClass('shine');
-    }, shineLen);
-}
-
-function counting() { // panel number is counting and showing;
-    count++;
-    $('.dash').text(count < 10 ? '0' + count : count);
-}
-
-function countingError() { // understrict model, panel number back to 0 and shine;
-    count = 0;
-    $('.dash').text('!!').fadeTo('fast', 0).fadeTo('fast', 1).fadeTo('fast', 0).fadeTo('fast', 1);
-}
-
-function aiPlay() { //play aiSequence;//keypoint!!!
-    var i = 0,
-        len = aiSequence.length; //replace for loop;
-    function loop() { //replace for loop;
-        if (i < len) {
-            playerFalse() //playerFlag=false;
-            aiSteps(i);
-            i++;
-            setTimeout(loop, intervalLen); //keypoint!!!
-        } else {
-            // call another function;
-            console.log(i)
-            playerTrue() //playerFlag=true;
+        // Increase round speed.
+        if (settings.round > 5) {
+            settings.speed = 500
         }
-    }
-    setTimeout(loop, intervalLen); //keypoint!!!
-    //setTimeout(counting, intervalLen);
-}
 
-function playerPush(option) { //make playerSequence;
-    var playerColor = $(option).attr('value');
-    playerSequence.push(playerColor);
-    sounds[playerColor].play();
-    $('.' + playerColor).addClass('shine');
-    setTimeout(function() {
-        $('.' + playerColor).removeClass('shine');
-    }, shineLen);
-}
-
-function startMove() { //player starts game;
-    playerSequence = [];
-    aiSequence = [];
-    count = 0;
-    aiPush();
-    aiPlay();
-}
-
-function wrongMove() { //player moves wrong;
-    playerSequence = [];
-    console.log('not match');
-    sounds.wrong.play();
-    // countingError();
-}
-
-function compare() { //compare aiSequence and playerSequence;
-    var playerLength = playerSequence.length - 1;
-    if (playerSequence[playerLength] !== aiSequence[playerLength]) { //aiSequence not equal to playerSequence;
-        if (strictFlag) { //strict model is on;
-            playerFalse(); //playerFlag=false;
-            setTimeout(wrongMove, 500);
-            setTimeout(countingError, 500);
-            setTimeout(startMove, 1000);
-
-        } else { //strict model is off;
-            playerFalse(); //playerFlag=false;
-            $('.dash').text('!!').fadeTo('fast', 0).fadeTo('fast', 1).fadeTo('fast', 0).fadeTo('fast', 1);
+        if (divid == "a") {
+            $("#a").css("background", "#5DADEC");
+            $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/Sound17.wav");
             setTimeout(function() {
-                $('.dash').text(count < 10 ? '0' + count : count);
-            }, 1200);
-            setTimeout(wrongMove, 500);
-            setTimeout(aiPlay, 1000);
+                $("#a").css("background", "#5DADEC");
+            }, 200);
+        } else if (divid == "b") {
+            $("#b").css("background", "red");
+            $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/R2chirp.wav");
+            setTimeout(function() {
+                $("#b").css("background", "red");
+            }, 200);
+        } else if (divid == "c") {
+            $("#c").css("background", "yellow");
+            $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/BEEP2.wav");
+            setTimeout(function() {
+                $("#c").css("background", "yellow");
+            }, 200);
+        } else if (divid == "d") {
+            $("#d").css("background", "green");
+            $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
+            setTimeout(function() {
+                $("#d").css("background", "green");
+            }, 200);
+        } else if (divid == "e") {
+            $("#e").css("background", "cyan");
+            $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
+            setTimeout(function() {
+                $("#e").css("background", "cyan");
+            }, 200);
+        } else if (divid == "f") {
+            $("#f").css("background", "purple");
+            $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
+            setTimeout(function() {
+                $("#f").css("background", "purple");
+            }, 200);
         }
-    } else { //aiSequence equal to playerSequence;
-        console.log('good move') //player moves correctly but not yet completes all the moves;
-        if (playerSequence.join('') === aiSequence.join('')) { //aiSequence equal to playerSequence;
-            len = aiSequence.length; //replace for loop;
+        
 
-            if (len === 20) { //player wins;
-                return win();
-            } else { //AI moves to next level (count) and play;
-                playerSequence = [];
-                aiPush();
-                console.log(aiSequence)
-                return aiPlay();
+        audio[0].pause();
+        audio[0].load();
+        audio[0].play();
+
+    }
+
+
+
+
+    function makeid() {
+        var text = "";
+        var possible = "abcdef";
+
+        for (var i = 0; i < 1; i++) {
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+            settings.sequence.push(text);
+
+        }
+
+
+
+
+        function myLoop() {
+            setTimeout(function() {
+                animate(settings.sequence[settings.playNumber]);
+                settings.playNumber++;
+                if (settings.playNumber < settings.sequence.length) {
+                    myLoop();
+                } else {
+                    settings.playNumber = 0;
+                    listen();
+                }
+            }, settings.speed)
+        }
+
+        myLoop();
+
+    }
+
+
+    // LISTEN 
+
+    function listen() {
+
+        $("#a, #b, #c, #d, #e, #f").on("mousedown", function() {
+
+
+            if (this.id == settings.sequence[settings.clicked]) {
+
+                if (settings.clicked === settings.sequence.length - 1) {
+                    $("#a, #b, #c, #d, #e, #f").off("mousedown");
+                    settings.clicked = 0;
+                    $(".butt.go").trigger("click");
+                } else {
+                    console.log("Right!");
+                    settings.clicked++;
+                }
+
+
+
+            } else {
+                console.log("WRONG");
+                $("#fail").show();
+                $("#fail").addClass("bigEntrance");
+                $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/MidwaySatanSOUND45.WAV");
+                audio[0].pause();
+                audio[0].load();
+                audio[0].play();
+                $("#simon, .dash").css("filter", "blur(5px)");
+                $("#simon, .dash").css("-webkit-filter", "blur(5px)");
+                settings.clicked = 0;
+                $("#blue, #red, #yellow, #green, #cyan, #purple").off("mousedown");
+
             }
-        }
-    }
-}
 
-$('.big').click(function() { //switch on off button;
-    if (!onFlag) {
-        onFlag = true;
-        $('.small').addClass('turnon');
-        $('.dash').addClass('turn');
-    } else {
-        onFlag = false;
-        strictFlag = false;
-        aiSequence = [];
-        playerSequence = [];
-        $('.dash').text('--');
-        count = 0;
-        console.clear();
-        $('.small').removeClass('turnon');
-        $('.dash').removeClass('turn');
-        $('.upper').removeClass('act');
-    }
-})
+        });
 
-$('.middle').click(function() { // press start button and game starts;
-    if (onFlag) {
-        startMove();
     }
-});
 
-$('.box').click(function() { //player clicks color parts and play sound and color shines;
-    if (onFlag && playerFlag) {
-        playerPush(this);
-        compare();
-    }
-})
-$('.right').click(function() { //press strict button and turn on or off strict model;
-    if (onFlag) {
-        if (!strictFlag) {
-            strictFlag = true;
-            $('.upper').addClass('act');
-        } else {
-            strictFlag = false;
-            $('.upper').removeClass('act');
-        }
-    }
-})
+
+
+    //BEGIN GAME
+
+    $("#a, #b, #c, #d, #e, #f").on("click", function() {
+        animate(this.id)
+    });
+    $(".go").on("click", function() {
+        // $("#start").hide();
+        $("#simon, .dash").css("filter", "blur(0px)");
+        $("#simon, .dash").css("-webkit-filter", "blur(0px)");
+        settings.round++;
+        makeid(); // make id and play it
+        $(".dash").html(settings.round);
+        //playit();
+
+
+
+
+    });
+
+    $("#fail").on("click", function() {
+        $("#fail").hide();
+        settings.sequence = [];
+        settings.round = 0;
+        settings.playNumber = 0,
+            settings.speed = 1000;
+        settings.clicked = 0;
+        $(".go").trigger("click");
+    });
+
+}); //document ready
