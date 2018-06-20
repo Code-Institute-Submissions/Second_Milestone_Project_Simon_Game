@@ -146,8 +146,8 @@ $(document).ready(function() {
     });
     $(".go").on("click", function() {
         // $("#start").hide();
-        $("#simon, .dash").css("filter", "blur(0px)");
-        $("#simon, .dash").css("-webkit-filter", "blur(0px)");
+        $(".dash").css("color", "red");
+        $(".title").text("GO!");
         settings.round++;
         makeid(); // make id and play it
         $(".dash").html(settings.round);

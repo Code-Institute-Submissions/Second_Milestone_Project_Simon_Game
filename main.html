@@ -13,55 +13,67 @@
 </head>
 
 <body>
-  <div class="container text-center">
+  <div class="container text-center" id="simon">
     <h1>SIMON SAYS</h1>
     <br><br>
     <div class="row">
       <div class="col-lg-3 offset-lg-3 col-md-3 offset-md-3 col-sm-3 offset-sm-3">
-        <button type="button" id="blue" class="btn btn-default btn-circle btn-xl inner-glow" value="blue">1</button>
+        <button type="button" id="a" class="btn btn-default btn-circle btn-xl inner-glow"></button>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-3">
-        <button type="button" id="red" class="btn btn-default btn-circle btn-xl inner-glow"  value="red">2</button>
+        <button type="button" id="b" class="btn btn-default btn-circle btn-xl inner-glow"></button>
       </div>
     </div>
     <br><br>
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-6">
-        <button type="button" id="yellow" class="btn btn-default btn-circle btn-xl inner-glow"  value="yellow">3</button>
+        <button type="button" id="c" class="btn btn-default btn-circle btn-xl inner-glow"></button>
       </div>
       <div class="col-lg-2 col-md-2 col-sm-2" id="scoreboard">
         <br>
-                <h2 class='title'>READY?</h2>
-                <div class='upper'></div>
-                <div class='left'>
-                    <h6 class='dash'>--</h6></div>
-                <div class='butt go'></div>
-                <div class='butt right'></div>
-                <h6 class='text count'>COUNT</h6>
-                <h6 class='text start'>START </h6>
-                <h6 class='text strict'>STRICT</h6>
-                <h6 class='text1 off'>OFF</h6>
-                <h6 class='text on'>ON</h6>
-                <div class='last big'>
-                    <div class='last small'></div>
-                </div>
+        <h2 class='title'>READY?</h2>
+        <div class='upper'></div>
+        <div class='left'>
+          <h6 class='dash'>--</h6>
+        </div>
+        <div class='butt go'></div>
+        <div class='butt right'></div>
+        <h6 class='text count'>COUNT</h6>
+        <h6 class='text start'>START </h6>
+        <h6 class='text strict'>STRICT</h6>
+        <h6 class='text1 off'>OFF</h6>
+        <h6 class='text on'>ON</h6>
+        <div class='last big'>
+          <div class='last small'></div>
+        </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6">
-        <button type="button" id="green" class="btn btn-default btn-circle btn-xl inner-glow" value="green">4</button>
+        <button type="button" id="d" class="btn btn-default btn-circle btn-xl inner-glow"></button>
       </div>
     </div>
     <br><br>
     <div class="row">
       <div class="col-lg-3 offset-lg-3 col-md-3 offset-md-3 col-sm-3 offset-sm-3">
-        <button type="button" id="cyan" class="btn btn-default btn-circle btn-xl inner-glow" value="cyan">5</button>
+        <button type="button" id="e" class="btn btn-default btn-circle btn-xl inner-glow"></button>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-3">
-        <button type="button" id="purple" class="btn btn-default btn-circle btn-xl inner-glow" value="purple">6</button>
+        <button type="button" id="f" class="btn btn-default btn-circle btn-xl inner-glow"></button>
       </div>
-      </div>
+    </div>
   </div>
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="script.js"></script>
+
+  <audio controls id="sound">
+        <source id="tune" src="http://www.chiptape.com/chiptape/sounds/medium/PlaceTrap.wav" type="audio/wav">
+  </audio>
+
+
+  <div id="created">
+    <p>By: <a href="#" target="_blank">@coderguider</a></p>
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="script.js"></script>
 
 </html>

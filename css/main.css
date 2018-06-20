@@ -1,3 +1,7 @@
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -17,7 +21,7 @@ body {
 
 h1 {
   font-size: 60px;
-  font-family: 'Futura';
+  font-family: 'inherit';
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
   text-align: center;
@@ -25,7 +29,7 @@ h1 {
 
 h2 {
  
-  font-family: 'Futura';
+  font-family: 'inherit';
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
   text-align: center;
@@ -63,73 +67,58 @@ h2 {
 /*********** Buttons ******/
 
 
-#blue {
+#a {
   border: 5px solid blue;
   box-shadow: 0 0 5px blue, /*0 0 10px #fff,*/ 0 0 20px blue inset, 0 0 30px blue inset, 0 0 40px blue, 0 0 55px blue, 0 0 75px blue;
 }
 
-#blue.shine {
-  border: 5px solid #5DADEC;
-  box-shadow: 0 0 5px #5DADEC, /*0 0 10px #fff,*/ 0 0 20px #5DADEC inset, 0 0 30px #5DADEC inset, 0 0 40px #5DADEC, 0 0 55px #5DADEC, 0 0 75px #5DADEC;
-}
 
-#red {
+#b {
   border: 5px solid #ED0A3F;
   box-shadow: 0 0 5px #ED0A3F, /*0 0 10px #fff,*/ 0 0 20px #ED0A3F inset, 0 0 30px #ED0A3F inset, 0 0 40px #ED0A3F, 0 0 55px #ED0A3F, 0 0 75px #ED0A3F;
 }
 
-#red.shine {
-  border: 5px solid #FF355E;
-  box-shadow: 0 0 5px #FF355E, /*0 0 10px #fff,*/ 0 0 20px #FF355E inset, 0 0 30px #FF355E inset, 0 0 40px #FF355E, 0 0 55px #FF355E, 0 0 75px #FF355E;
-}
 
-#yellow {
+#c {
   border: 5px solid yellow;
   box-shadow: 0 0 5px yellow, /*0 0 10px #fff,*/ 0 0 20px yellow inset, 0 0 30px yellow inset, 0 0 40px yellow, 0 0 55px yellow, 0 0 75px yellow;
 }
 
-#yellow.shine {
-  border: 5px solid #FFFF99;
-  box-shadow: 0 0 5px #FFFF99, /*0 0 10px #fff,*/ 0 0 20px #FFFF99 inset, 0 0 30px #FFFF99 inset, 0 0 40px #FFFF99, 0 0 55px #FFFF99, 0 0 75px #FFFF99;
-}
 
-#green {
+#d {
   border: 5px solid green;
   box-shadow: 0 0 5px green, /*0 0 10px #fff,*/ 0 0 20px green inset, 0 0 30px green inset, 0 0 40px green, 0 0 55px green, 0 0 75px green;
 }
 
-#green.shine {
-  border: 5px solid #66FF66;
-  box-shadow: 0 0 5px #66FF66, /*0 0 10px #fff,*/ 0 0 20px #66FF66 inset, 0 0 30px #66FF66 inset, 0 0 40px #66FF66, 0 0 55px #66FF66, 0 0 75px #66FF66;
-}
 
-#cyan {
+#e {
   border: 5px solid cyan;
   box-shadow: 0 0 5px cyan, /*0 0 10px #fff,*/ 0 0 20px cyan inset, 0 0 30px cyan inset, 0 0 40px cyan, 0 0 55px cyan, 0 0 75px cyan;
 }
 
-#cyan.shine {
-  border: 5px solid #C8C8CD;
-  box-shadow: 0 0 5px #C8C8CD, /*0 0 10px #fff,*/ 0 0 20px #C8C8CD inset, 0 0 30px #C8C8CD inset, 0 0 40px #C8C8CD, 0 0 55px #C8C8CD, 0 0 75px #C8C8CD;
-}
 
-#purple {
+#f {
   border: 5px solid purple;
   box-shadow: 0 0 5px purple, /*0 0 10px #fff,*/ 0 0 20px purple inset, 0 0 30px purple inset, 0 0 40px purple, 0 0 55px purple, 0 0 75px purple;
 }
 
-.box {
-    background-clip: content-box;
-    position: absolute;
-    width: 236px;
-    height: 236px;
-    border: 12px solid #2E2E2E;
+
+#fail {
+  display:block;
+  width:400px;
+  height:350px;
+  text-align:center;
+  position:relative;
+  margin:0 auto;
+  font-size:105px;
+  color:#ffffff;
+  padding-top:95px;
+  display:none;
 }
 
-.box.true {
-    cursor: pointer;
+#sound {
+  display: none!important;
 }
-
 
 /****** Scoreboard *****/
 
@@ -187,7 +176,7 @@ h2 {
     color: #DC0D29;
 }
 
-.button {
+.butt {
     border: 4px solid #444444;
     outline: none;
     height: 28px;
@@ -196,11 +185,11 @@ h2 {
     cursor: pointer;
 }
 
-.button:active {
+.butt:active {
     border: 4px solid #2E2E2E;
 }
 
-.middle {
+.go {
     margin-top: -34px;
     margin-left: 102px;
     background-color: green;
@@ -213,12 +202,12 @@ h2 {
 }
 
 .text, .text1 {
-    font-family: 'Futura';
+    font-family: 'inherit';
     font-size: 12px;
     font-weight: bold;
     position: absolute;
     color: #fff;
-  text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #ff0080, 0 0 3px #ff0080, 0 0 4px #ff0080, 0 0 5px #ff0080, 0 0 5px #ff0080;
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #ff0080, 0 0 3px #ff0080, 0 0 4px #ff0080, 0 0 5px #ff0080, 0 0 5px #ff0080;
 }
 
 .count {
