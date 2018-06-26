@@ -137,33 +137,30 @@ h2 {
 /****** Scoreboard *****/
 
 #scoreboard {
-    /*background-clip: content-box;*/
-    margin: 0px;
-    vertical-align: middle;
-    /*border-radius: 50%;*/
-    width: 240px;
+    margin: 0 auto;
+    border-radius: 50%;
+    max-width: 240px;
     height: 240px;
     background-color: transparent;
-    /*position: absolute;*/
     transform: translateY(-19px);
     border: 5px solid white;
     box-shadow: 0 0 5px white, 0 0 10px #fff, 0 0 15px white inset, 0 0 30px white inset, 0 0 40px white, 0 0 5px white, 0 0 5px white;
 }
 
-.left {
+.CountDisplay {
     width: 58px;
     height: 40px;
     background-color: #32050C;
     border-radius: 10px;
     border: 4px solid #2E2E2E;
-    margin-left: 77px;
-    margin-top: 0px;
+    margin-left: 12px;
+    margin-top: 10px;
 }
 
 .dash {
     color: #430710;
     font-size: 30px;
-    margin-top: 3px;
+    margin-top: -2px;
 }
 
 .dash.turn {
@@ -185,13 +182,13 @@ h2 {
 
 .go {
     margin-top: -34px;
-    margin-left: 160px;
+    margin-left: 92px;
     background-color: green;
 }
 
 .right {
     margin-top: -28px;
-    margin-left: 223px;
+    margin-left: 150px;
     background-color: yellow;
 }
 
@@ -205,28 +202,28 @@ h2 {
 }
 
 .count {
-    top: 108px;
-    left: 101px;
+    top: 124px;
+    left: 33px;
 }
 
 .start {
-    top: 108px;
-    left: 171px;
+    top: 124px;
+    left: 104px;
 }
 
 .strict {
-    top: 108px;
-    left: 232px;
+    top: 124px;
+    left: 160px;
 }
 
 .off {
-    top: 145px;
-    left: 128px;
+    top: 166px;
+    left: 60px;
 }
 
 .on {
-    top: 145px;
-    left: 213px;
+    top: 167px;
+    left: 155px;
 }
 
 .big {
@@ -234,8 +231,8 @@ h2 {
     width: 40px;
     height: 20px;
     background-color: #222222;
-    top: 142px;
-    left: 162px;
+    top: 164px;
+    left: 97px;
     border-radius: 4px;
     cursor: pointer;
 }
