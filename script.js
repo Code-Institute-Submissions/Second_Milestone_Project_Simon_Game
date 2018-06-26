@@ -25,42 +25,42 @@ $(document).ready(function() {
             setTimeout(function() {
                 $("#a").css("background", "#5DADEC");
                 $("#a").css("background", "");
-            }, 200);
+            }, 100);
         } else if (divid == "b") {
             $("#b").css("background", "red");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/R2chirp.wav");
             setTimeout(function() {
                 $("#b").css("background", "red");
                 $("#b").css("background", "");
-            }, 200);
+            }, 100);
         } else if (divid == "c") {
             $("#c").css("background", "yellow");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/BEEP2.wav");
             setTimeout(function() {
                 $("#c").css("background", "yellow");
                 $("#c").css("background", "");
-            }, 200);
+            }, 100);
         } else if (divid == "d") {
             $("#d").css("background", "green");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#d").css("background", "green");
                 $("#d").css("background", "");
-            }, 200);
+            }, 100);
         } else if (divid == "e") {
             $("#e").css("background", "cyan");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#e").css("background", "cyan");
                 $("#e").css("background", "");
-            }, 200);
+            }, 100);
         } else if (divid == "f") {
             $("#f").css("background", "purple");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#f").css("background", "purple");
                 $("#f").css("background", "");
-            }, 200);
+            }, 100);
         }
         
 
@@ -73,7 +73,7 @@ $(document).ready(function() {
 
 
 
-    function makeid() {
+    function letsplay() {
         var text = "";
         var possible = "abcdef";
 
@@ -127,16 +127,16 @@ $(document).ready(function() {
             } else {
                 console.log("WRONG");
                 $("#fail").show();
-                $("#fail").addClass("bigEntrance");
+                $("#fail").addClass("ItsOver");
                 $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/MidwaySatanSOUND45.WAV");
                 audio[0].pause();
                 audio[0].load();
                 audio[0].play();
-                $("#simon, .dash").css("filter", "blur(5px)");
-                $("#simon, .dash").css("-webkit-filter", "blur(5px)");
+                // sequence[0].pause();
+                $("#simon").css("filter", "blur(5px)");
+                $("#simon").css("-webkit-filter", "blur(5px)");
                 settings.clicked = 0;
                 $("#blue, #red, #yellow, #green, #cyan, #purple").off("mousedown");
-
             }
 
         });
@@ -148,13 +148,13 @@ $(document).ready(function() {
     //BEGIN GAME
 
     $("#a, #b, #c, #d, #e, #f").on("click", function() {
-        animate(this.id)
+        animate(this.id);
     });
     $(".go").on("click", function() {
         $(".dash").css("color", "red");
         $(".title").text("GO!");
         settings.round++;
-        makeid(); // make id and play it
+        letsplay(); // make id and play it
         $(".dash").html(settings.round);
         //playit();
 
@@ -165,12 +165,13 @@ $(document).ready(function() {
 
     $("#fail").on("click", function() {
         $("#fail").hide();
+        $("#simon").removeAttr("style");
         settings.sequence = [];
         settings.round = 0;
         settings.playNumber = 0,
             settings.speed = 1000;
         settings.clicked = 0;
-        $(".go").trigger("click");
+        // $(".go").trigger("click");
     });
 
 }); //document ready
