@@ -24,36 +24,42 @@ $(document).ready(function() {
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/Sound17.wav");
             setTimeout(function() {
                 $("#a").css("background", "#5DADEC");
+                $("#a").css("background", "");
             }, 200);
         } else if (divid == "b") {
             $("#b").css("background", "red");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/R2chirp.wav");
             setTimeout(function() {
                 $("#b").css("background", "red");
+                $("#b").css("background", "");
             }, 200);
         } else if (divid == "c") {
             $("#c").css("background", "yellow");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/BEEP2.wav");
             setTimeout(function() {
                 $("#c").css("background", "yellow");
+                $("#c").css("background", "");
             }, 200);
         } else if (divid == "d") {
             $("#d").css("background", "green");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#d").css("background", "green");
+                $("#d").css("background", "");
             }, 200);
         } else if (divid == "e") {
             $("#e").css("background", "cyan");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#e").css("background", "cyan");
+                $("#e").css("background", "");
             }, 200);
         } else if (divid == "f") {
             $("#f").css("background", "purple");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#f").css("background", "purple");
+                $("#f").css("background", "");
             }, 200);
         }
         
@@ -145,7 +151,6 @@ $(document).ready(function() {
         animate(this.id)
     });
     $(".go").on("click", function() {
-        // $("#start").hide();
         $(".dash").css("color", "red");
         $(".title").text("GO!");
         settings.round++;
