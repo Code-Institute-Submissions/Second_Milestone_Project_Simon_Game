@@ -71,8 +71,9 @@ h2 {
   0 0 40px blue, 0 0 55px blue, 0 0 75px blue;
   -webkit-animation: pulsate-blue 1s infinite alternate;
   -moz-animation: pulsate-blue 1s infinite alternate;
-  -animation: pulsate-blue 1s infinite alternate;
+  animation: pulsate-blue 1s infinite alternate;
 }
+
 
 
 #b {
@@ -93,7 +94,7 @@ h2 {
   0 0 75px yellow;
   -webkit-animation: pulsate-yellow 1.6s infinite alternate;
   -moz-animation: pulsate-yellow 1.6s infinite alternate;
-  -animation: pulsate-yellow 1.6s infinite alternate;
+  animation: pulsate-yellow 1.6s infinite alternate;
 }
 
 
@@ -104,7 +105,7 @@ h2 {
   0 0 75px green;
   -webkit-animation: pulsate-green 1.3s infinite alternate;
   -moz-animation: pulsate-green 1.3s infinite alternate;
-  -animation: pulsate-green 1.3s infinite alternate;
+  animation: pulsate-green 1.3s infinite alternate;
 }
 
 
@@ -115,7 +116,7 @@ h2 {
   0 0 75px cyan;
   -webkit-animation: pulsate-cyan 1.5s infinite alternate;
   -moz-animation: pulsate-cyan 1.5s infinite alternate;
-  -animation: pulsate-cyan 1.5s infinite alternate;
+  animation: pulsate-cyan 1.5s infinite alternate;
 }
 
 
@@ -126,7 +127,7 @@ h2 {
   0 0 75px purple;
   -webkit-animation: pulsate-purple 1.4s infinite alternate;
   -moz-animation: pulsate-purple 1.4s infinite alternate;
-  -animation: pulsate-purple 1.4s infinite alternate;
+  animation: pulsate-purple 1.4s infinite alternate;
 }
 
 

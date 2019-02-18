@@ -11,7 +11,7 @@ var settings = {
 $(document).ready(function() {
     var audio = $("#sound");
 
-    function animate(divid) {
+    function animate(anim) {
 
 
         // Increase round speed.
@@ -19,42 +19,47 @@ $(document).ready(function() {
             settings.speed = 500
         }
 
-        if (divid == "a") {
+        if (anim == "a") {
             $("#a").css("background", "#5DADEC");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/Sound17.wav");
             setTimeout(function() {
                 $("#a").css("background", "#5DADEC");
                 $("#a").css("background", "");
             }, 100);
-        } else if (divid == "b") {
+        }
+        else if (anim == "b") {
             $("#b").css("background", "red");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/R2chirp.wav");
             setTimeout(function() {
                 $("#b").css("background", "red");
                 $("#b").css("background", "");
             }, 100);
-        } else if (divid == "c") {
+        }
+        else if (anim == "c") {
             $("#c").css("background", "yellow");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/BEEP2.wav");
             setTimeout(function() {
                 $("#c").css("background", "yellow");
                 $("#c").css("background", "");
             }, 100);
-        } else if (divid == "d") {
+        }
+        else if (anim == "d") {
             $("#d").css("background", "green");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#d").css("background", "green");
                 $("#d").css("background", "");
             }, 100);
-        } else if (divid == "e") {
+        }
+        else if (anim == "e") {
             $("#e").css("background", "cyan");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
                 $("#e").css("background", "cyan");
                 $("#e").css("background", "");
             }, 100);
-        } else if (divid == "f") {
+        }
+        else if (anim == "f") {
             $("#f").css("background", "purple");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/blob.wav");
             setTimeout(function() {
@@ -62,7 +67,7 @@ $(document).ready(function() {
                 $("#f").css("background", "");
             }, 100);
         }
-        
+
 
         audio[0].pause();
         audio[0].load();
@@ -92,7 +97,8 @@ $(document).ready(function() {
                 settings.playNumber++;
                 if (settings.playNumber < settings.sequence.length) {
                     myLoop();
-                } else {
+                }
+                else {
                     settings.playNumber = 0;
                     listen();
                 }
@@ -117,18 +123,21 @@ $(document).ready(function() {
                     $("#a, #b, #c, #d, #e, #f").off("mousedown");
                     settings.clicked = 0;
                     $(".butt.go").trigger("click");
-                } else {
+                }
+                else {
                     console.log("Right!");
                     settings.clicked++;
                 }
 
 
 
-            } else {
+            }
+            else {
                 console.log("WRONG");
                 $("#fail").show();
                 $("#fail").addClass("ItsOver");
-                $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/MidwaySatanSOUND45.WAV");
+                $("#tune").attr("src", "/sounds/wrong.wav");
+                $(".title").text("DEAD!");
                 audio[0].pause();
                 audio[0].load();
                 audio[0].play();
@@ -153,14 +162,13 @@ $(document).ready(function() {
     $(".go").on("click", function() {
         $(".dash").css("color", "red");
         $(".title").text("GO!");
+        $("#a, #b, #c, #d, #e, #f").css("-webkit-animation", "none");
+        $("#a, #b, #c, #d, #e, #f").css("-moz-animation", "none");
+        $("#a, #b, #c, #d, #e, #f, #scoreboard").css("animation", "none");
         settings.round++;
-        letsplay(); // make id and play it
+        setTimeout(letsplay(), 100000); // make id and play it  --- should just be " letsplay(); "
         $(".dash").html(settings.round);
         //playit();
-
-
-
-
     });
 
     $("#fail").on("click", function() {
@@ -171,7 +179,6 @@ $(document).ready(function() {
         settings.playNumber = 0,
             settings.speed = 1000;
         settings.clicked = 0;
-        // $(".go").trigger("click");
     });
 
 }); //document ready
