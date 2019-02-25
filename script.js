@@ -15,10 +15,10 @@ $(document).ready(function() {
 
 
         // Increase round speed.
-        if (settings.round > 5) {
+        if ( $('.right').hasClass('hardon') ) {
             settings.speed = 500
         }
-
+        
         if (anim == "a") {
             $("#a").css("background", "#5DADEC");
             $("#tune").attr("src", "http://www.chiptape.com/chiptape/sounds/medium/Sound17.wav");
@@ -74,8 +74,6 @@ $(document).ready(function() {
         audio[0].play();
 
     }
-
-
 
 
     function letsplay() {
@@ -162,15 +160,21 @@ $(document).ready(function() {
     $(".go").on("click", function() {
         $(".dash").css("color", "red");
         $(".title").text("GO!");
-        $("#a, #b, #c, #d, #e, #f").css("-webkit-animation", "none");
-        $("#a, #b, #c, #d, #e, #f").css("-moz-animation", "none");
+        $("#a, #b, #c, #d, #e, #f, #scoreboard").css("-webkit-animation", "none");
+        $("#a, #b, #c, #d, #e, #f, #scoreboard").css("-moz-animation", "none");
         $("#a, #b, #c, #d, #e, #f, #scoreboard").css("animation", "none");
         settings.round++;
         setTimeout(letsplay(), 100000); // make id and play it  --- should just be " letsplay(); "
         $(".dash").html(settings.round);
         //playit();
     });
+    
+    $(".right").on("click", function() { // indicates difficulty
+        $(".right").toggleClass("hardon");
+        $(".hard").toggleClass("diff");
+    });
 
+    
     $("#fail").on("click", function() {
         $("#fail").hide();
         $("#simon").removeAttr("style");

@@ -157,6 +157,7 @@ h2 {
   font-size: 50px;
 }
 
+
 #created {
   position: fixed;
   right: 30px;
@@ -193,9 +194,12 @@ h2 {
   border-radius: 10px;
   border: 4px solid #2E2E2E;
   margin-left: 12px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
+.title {
+  margin-top: -2px;
+}
 .dash {
   color: #430710;
   font-size: 30px;
@@ -243,18 +247,18 @@ h2 {
 }
 
 .level {
-  top: 124px;
-  left: 36px;
+  top: 150px;
+  left: 35px;
 }
 
 .start {
-  top: 124px;
-  left: 104px;
+  top: 150px;
+  left: 101px;
 }
 
-.strict {
-  top: 124px;
-  left: 160px;
+.hard {
+  top: 150px;
+  left: 158px;
 }
 
 .off {
@@ -265,6 +269,24 @@ h2 {
 .on {
   top: 167px;
   left: 155px;
+}
+
+.hardon {
+  color: red;
+  background-color: red;
+  border: 5px solid red;
+  box-shadow: 0 0 5px red;
+  -webkit-animation: pulsate-white 1.7s infinite alternate;
+  -moz-animation: pulsate-white 1.7s infinite alternate;
+  -animation: pulsate-white 1.7s infinite alternate;
+}
+
+.diff::after {
+  content: 'NORMAL';
+}
+
+.diff.opened::after {
+  content: 'HARD'!important;
 }
 
 .big {
