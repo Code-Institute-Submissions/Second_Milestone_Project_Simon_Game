@@ -130,6 +130,15 @@ h2 {
   animation: pulsate-purple 1.4s infinite alternate;
 }
 
+.button {
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 5px solid white;
+  box-shadow: 0 0 10px white, 0 0 5px white, 0 0 5px white;
+}
 
 /*********Misc**********/
 
@@ -161,7 +170,7 @@ h2 {
 #created {
   position: fixed;
   right: 30px;
-  bottom: 20px
+  bottom: 20px;
 }
 
 .therules {
@@ -212,6 +221,7 @@ h2 {
 .title {
   margin-top: -2px;
 }
+
 .dash {
   color: #430710;
   font-size: 30px;
