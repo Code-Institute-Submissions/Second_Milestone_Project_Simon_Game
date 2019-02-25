@@ -164,6 +164,18 @@ h2 {
   bottom: 20px
 }
 
+.therules {
+  position: fixed;
+  left: 30px;
+  top: 20px;
+  font-family: 'inherit';
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+}
+
+
 #sound {
   display: none!important;
 }
