@@ -107,7 +107,13 @@ $(document).ready(function() {
 
     }
 
-
+    // RULES
+    
+    $("#show_hide").click(function () {
+     $("#toggle_rls").toggle()
+    });
+    
+    
     // LISTEN 
 
     function listen() {
