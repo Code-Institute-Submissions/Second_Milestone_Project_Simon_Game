@@ -16,8 +16,7 @@ Manual testing was undertaken for this application and satisfactorily passed. Te
 1. Unit testing - Tested small chunks of the code as I progressedto ensure the code is functioning
 2. Integration testing - Tested combinations of units to ensure new code doesn't interfere with existing code
 3. Acceptance testing — Tested the application in sevreal different browsers and devices to analyze the performance of the entire application.
-4. Code which was credited was tested as an example then modified for desired outcome
-5. 
+4. Code which was credited, was tested as the example given, then modified for desired outcome
 
 
 ## Design
